@@ -1,4 +1,3 @@
-# speech-based-search-engine
 ## 🔍 Speech-Based Search Engine
 
 A simple Python application that allows users to perform web searches using voice commands. It utilizes speech recognition to capture queries and opens a browser window with search results using Google.
