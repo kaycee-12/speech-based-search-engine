@@ -1,59 +1,58 @@
+# speech-based-search-engine
+## 🔍 Speech-Based Search Engine
 
-# 🔊 Voice Search Assistant
+A simple Python application that allows users to perform web searches using voice commands. It utilizes speech recognition to capture queries and opens a browser window with search results using Google.
 
-This is a simple Python program that uses voice recognition to take a search query from the user and opens Google search results in the default web browser. It also provides spoken feedback using text-to-speech.
+### 🧠 Features
 
-## 📋 Features
+* 🎤 Voice-activated search using microphone input
+* 🌐 Opens search results directly in your default web browser
+* 🔈 Text-to-speech feedback for user interaction
 
-- Listens to your voice command via microphone.
-- Recognizes spoken words using Google's Speech Recognition API.
-- Speaks prompts and responses using a text-to-speech engine.
-- Opens a web browser with the Google search results for your query.
+### 🛠️ Technologies Used
 
-## 🚀 Requirements
+* [`speech_recognition`](https://pypi.org/project/SpeechRecognition/): Captures and interprets spoken language
+* [`pyttsx3`](https://pypi.org/project/pyttsx3/): Provides text-to-speech responses
+* `webbrowser`: Launches Google search results in the browser
 
-Before running this script, you need to install the following Python packages:
+### 📦 Installation
+
+Install the necessary dependencies:
 
 ```bash
 pip install SpeechRecognition pyttsx3 pyaudio
 ```
 
-> **Note**: `pyaudio` can be tricky to install on some systems. If you encounter issues, look for system-specific instructions or use a pre-built wheel.
+> ⚠️ Note: `pyaudio` can be tricky to install on some systems. For Windows, you may need to download a `.whl` file from [https://www.lfd.uci.edu/\~gohlke/pythonlibs/#pyaudio](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio).
 
-## 🛠️ How It Works
-
-1. The script starts and prompts the user to speak a query.
-2. It listens through the microphone.
-3. It converts the audio into text using the Google Speech Recognition API.
-4. It opens the default web browser with the Google search results for the recognized query.
-5. It uses a speech engine to read back the query or provide error messages.
-
-## 🧠 Usage
-
-To run the script:
+### 🚀 How to Run
 
 ```bash
-python voice_search.py
+python "speech based search engine.py"
 ```
 
-After running, speak clearly into your microphone when prompted.
+### 💡 How It Works
 
-## 📌 Example
+1. Prompts the user to speak their search query.
+2. Recognizes the speech using Google’s Speech API.
+3. Opens the query in a browser using Google Search.
+4. Gives voice feedback of the recognized query.
 
-```
+### 🧪 Example
+
+```text
 Listening...
-What do you want to search for?
 Recognizing...
-You said: weather today
-[Opens Google with search: "weather today"]
+You said: weather in Paris
 ```
 
-## ❗ Troubleshooting
+➡ Browser opens with: `https://www.google.com/search?q=weather+in+Paris`
 
-- **Microphone not working**: Make sure your microphone is properly connected and accessible.
-- **Recognition errors**: Ensure you have an internet connection; the Google API requires it.
-- **PyAudio install issues**: You may need to install system-specific dependencies (like `portaudio`).
+### 📌 Requirements
 
-## 📄 License
+* A working microphone
+* Internet connection (for Google Speech Recognition)
 
-This project is licensed under the MIT License.
+### 📜 License
+
+MIT License
